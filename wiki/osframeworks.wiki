@@ -2,5 +2,5 @@
 
 
 == 开发技术 ==
-* jpa(hibnerate)
-* spring(springMVC)
+ * jpa(hibnerate)
+ * spring(springMVC)
