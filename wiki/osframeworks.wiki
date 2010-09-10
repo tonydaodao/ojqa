@@ -1,8 +1,7 @@
-#介绍了本项目中所用到的技术
+#summary 介绍了本项目中所用到的技术
 
 
 
 
 = jpa(hibnerate) =
 = spring(springMVC) =
-
