@@ -1,14 +1,18 @@
 #summary 介绍了本项目中所用到的技术
 
 
-== 框架（开发） ==
+== 后台 ==
  * jpa(hibnerate)
  * spring(springMVC)
 
+== 前端 ==
+ * jQuery
+
 == 构建工具 ==
  * maven
-  # maven插件1
-  # maven插件1
+  # checkstyle plugin
+  # selenium plugin
+  # jmeter plugin
 
 == IDE ==
  * eclipse
