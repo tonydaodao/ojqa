@@ -1,0 +1,107 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */ /* NAV */
+div#nav {
+	border-bottom: 5px solid #D7E9F5;
+	font-size: 0.8em;
+}
+
+* html div#nav { /* hide ie/mac \*/
+	height: 1%;
+	/* end hide */
+}
+
+div#nav div.wrapper {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+div#nav ul {
+	width: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	font-size: 1.2em;
+	list-style: none;
+}
+
+div#nav li {
+	float: left;
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	/*border-right: 1px solid #aaa;*/
+}
+
+div#nav li.last {
+	border-right: none;
+}
+
+div#nav a,div#nav a:link,div#nav a:active,div#nav a:visited {
+	display: inline-block;
+	/* hide from ie/mac \*/
+	display: block;
+	/* end hide */
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 5px 18px;
+	color: #4F8CC9;
+}
+
+div#nav a:hover {
+	background-color: #EBF5FC;
+	text-decoration: none;
+}
+
+div#nav a.current {
+	display: inline-block;
+	/* hide from ie/mac \*/
+	display: block;
+	/* end hide */
+	color: #4f8cc9;
+	background: #d7e9f5;
+	font-size: 1.2em !important;
+}
+
+div#nav a.current,div#nav a.current:link,div#nav a.current:active,div#nav a.current:visited,div#nav a.current:hover
+	{
+	color: #4f8cc9;
+	background-color: #d7e9f5;
+}
+
+div#nav strong {
+	display: inline-block;
+	/* hide from ie/mac \*/
+	display: block;
+	/* end hide */
+	color: white;
+	background: black;
+}
+
+div#nav strong a,div#nav strong a:link,div#nav strong a:active,div#nav strong a:visited,div#nav strong a:hover
+	{
+	color: white;
+	background-color: black;
+}
+
+ul#primary-nav li a {
+	color: #777777;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	width: 90px;
+}
+
+ul#primary-nav li a:hover {
+	color: #E2144A;
+}
+
+div#nav .pad {
+	padding-left: 10px;
+}
+/* END NAV */

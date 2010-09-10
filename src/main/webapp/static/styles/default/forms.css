@@ -1,0 +1,245 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+	/* FORM ELEMENTS */
+form {
+	margin: 0;
+	padding: 0;
+}
+
+form ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+/*
+form div,form p {
+	font-size: 1em;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+*/
+form li {
+	line-height: 2em;
+	margin: 0;
+	padding: 1px 1px 6px 5px;
+}
+
+form li div {
+	margin-bottom: 0;
+	display: inline-block;
+}
+
+form[id] li {
+	display: block;
+}
+
+form[id] li div {
+	display: inline;
+}
+
+form li p {
+	color: #444444;
+	font-size: 9px;
+	line-height: 13px;
+}
+
+form .info {
+	border-bottom: 1px dotted #CCCCCC !important;
+	display: inline-block;
+	margin: 0 0 4px;
+	padding: 0 0 4px;
+	text-align: left;
+}
+
+form .info p {
+	font-size: 1em;
+	line-height: 1.3em;
+	margin: 0 0 8px;
+}
+
+form .info[class] {
+	display: block;
+}
+
+form .left {
+	float: left !important;
+	margin: 0;
+}
+
+form .medium {
+	width: 170px;
+}
+
+form div.left {
+	margin-right: 2px !important;
+}
+
+form div.left[class] {
+	margin-right: 4px !important;
+}
+
+form div.submit {
+	margin: 1em 0;
+}
+
+form div.submit input {
+	height: 2em;
+	width: 15em;
+}
+
+form .large,form textarea.textarea {
+	width: 349px;
+}
+
+label {
+	font-weight: bold;
+}
+
+label.desc {
+	border: 0 none;
+	color: #444444;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin: 4px 0 3px;
+}
+
+fieldset {
+	border: 1px solid #eee;
+	padding: 5px 10px;
+	margin: 0 0 1.5em 0;
+}
+
+fieldset legend {
+	color: #666;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0 0 0 0px;
+	padding: 0;
+	background-color: white;
+}
+
+* html fieldset legend {
+	margin: 0 0 10px -10px;
+}
+
+fieldset ul {
+	list-style: none;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+fieldset ul li {
+	list-style: none;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+
+input,select,textarea {
+	font-size: 1em;
+	font-family: arial, helvetica, verdana, sans-serif;
+	margin: 0;
+	padding: 2px;
+}
+
+input,select {
+	vertical-align: middle;
+}
+
+input[type].ui-button {
+	padding:0.2em 0.2em;
+}
+
+a.delete-button{
+	top:0.134em;
+	left:38%;
+}
+
+a.add-button {
+	float:right;
+	top:-2.3em;
+}
+
+.ui-button-text-only span.ui-button-text{
+	padding:0.185em;
+}
+
+
+textarea {
+	width: 200px;
+	height: 8em;
+}
+
+input.text,input.number,input.url,input.email,input.password,input.file,textarea.textarea,select.select
+	{
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #FFFFFF url(../../images/fieldbg.gif) repeat-x scroll center
+		top;
+	border-color: #7C7C7C #C3C3C3 #DDDDDD;
+	border-style: solid;
+	border-width: 1px;
+	color: #333333;
+	font-size: 1.2em;
+}
+
+input.text,input.number,input.url,input.email,input.password,input.file
+	{
+	padding: 2px;
+}
+
+input.check {
+	border: none;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+
+input.radio {
+	border: none;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+
+input.file {
+	height: auto;
+	width: 250px;
+}
+
+input.readonly {
+	background-color: transparent;
+	border: none;
+}
+
+input.button {
+	width: 10em;
+	border: 1px solid black;
+	background-color: #ddd;
+}
+
+input.image {
+	border: none;
+	width: auto;
+	height: auto;
+}
+
+div.wwlbl {
+	display: block !important;
+}
+
+.req {
+	color: #FF9900;
+	font-size: 1em !important;
+	font-weight: bold;
+}
+
+.highlight {
+	background-color: #ffd !important;
+}
+/* END FORM ELEMENTS */

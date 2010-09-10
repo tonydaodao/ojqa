@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="7" lt="7" ts="1278823418830" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="5" lt="5" ts="1278823418842" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278823418848" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278823419830" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278823419835" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278823419838" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278823420830" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278823420833" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="2" lt="1" ts="1278823420836" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+
+<httpSample t="7" lt="7" ts="1278824040429" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824040438" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824040441" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="6" lt="6" ts="1278824041429" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="5" lt="5" ts="1278824041442" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="6" lt="6" ts="1278824041452" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824042429" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="4" lt="4" ts="1278824042434" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824042440" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+
+<httpSample t="4" lt="4" ts="1278824065827" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824065833" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824065836" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="3" lt="2" ts="1278824066827" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824066832" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824066837" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824067829" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824067832" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824067835" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+
+<httpSample t="5" lt="5" ts="1278824150157" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824150164" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824150166" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="4" lt="4" ts="1278824151156" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824151162" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824151167" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824152157" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="4" lt="4" ts="1278824152163" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="4" lt="4" ts="1278824152172" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+
+<httpSample t="4" lt="3" ts="1278824174510" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824174515" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824174518" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-1" dt="text" by="1289"/>
+<httpSample t="3" lt="3" ts="1278824175512" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824175517" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824175520" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-2" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824176512" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="2" lt="2" ts="1278824176515" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+<httpSample t="1" lt="1" ts="1278824176518" s="false" lb="HTTP Request" rc="404" rm="Not Found" tn="actm users 1-3" dt="text" by="1289"/>
+
+</testResults>

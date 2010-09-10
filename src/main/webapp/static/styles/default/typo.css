@@ -1,0 +1,254 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+	/* TYPOGRAPHY */
+body {
+	text-align: left;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 76%;
+	line-height: 1em;
+	color: #333;
+}
+
+div {
+	font-size: 1em;
+}
+
+img {
+	border: 0;
+}
+
+/* LINKS */
+a,a:link 
+	a:active {
+	color: #1465B7;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #1465B7;
+	background-color: transparent;
+}
+
+a:hover {
+	color: #cc0000;
+	text-decoration: none;
+}
+
+/* END LINKS */ /* HEADINGS */
+h1,h2,h3,h4,h5,h6 {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2.6em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+	color: #1465B7;
+}
+
+h2 {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	color: black;
+}
+
+h3 {
+	font-size: 2.2em;
+	line-height: 1.3em;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	color: #B4C24B;
+}
+
+h4 {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	margin: 0 0 0.25em 0;
+	padding: 0;
+	color: black;
+}
+
+h5 {
+	font-size: 1.1em;
+	line-height: 1.3em;
+	margin: 0 0 0.25em 0;
+	padding: 0;
+	color: black;
+}
+
+h6 {
+	font-size: 1em;
+	line-height: 1.3em;
+	margin: 0 0 0.25em 0;
+	padding: 0;
+	color: black;
+}
+
+div#branding h1 {
+	color: #1465B7;
+	font-size: 2.6em;
+	letter-spacing: -1px;
+	line-height: 1.5em;
+	margin: 0;
+}
+
+/* END HEADINGS */ /* TEXT */
+p {
+	font-size: 1em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	line-height: 1.4em;
+}
+
+blockquote {
+	border-left: 10px solid #ddd;
+	margin-left: 10px;
+}
+
+pre {
+	font-family: monospace;
+	font-size: 1.0em;
+}
+
+strong,b {
+	font-weight: bold;
+}
+
+em,i {
+	font-style: italic;
+}
+
+code {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+	white-space: pre;
+}
+
+/* END TEXT */ /* LISTS */
+ul {
+	line-height: 1.4em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+ul li {
+	margin: 0 0 0.25em 30px;
+	padding: 0;
+}
+
+ol {
+	font-size: 1.0em;
+	line-height: 1.4em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+ol li {
+	font-size: 1.0em;
+	margin: 0 0 0.25em 30px;
+	padding: 0;
+}
+
+dl {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	line-height: 1.4em;
+}
+
+dl dt {
+	font-weight: bold;
+	margin: 0.25em 0 0.25em 0;
+	padding: 0;
+}
+
+dl dd {
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+
+/* END LISTS */ /* TABLE */
+table {
+	font-size: 1em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+
+table caption {
+	font-weight: bold;
+	margin: 0 0 0 0;
+	padding: 0 0 1.5em 0;
+}
+
+th {
+	font-weight: bold;
+	text-align: left;
+}
+
+td {
+	font-size: 1em;
+}
+
+.table {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #FFFFFF none repeat scroll 0 0;
+	border: 2px solid #74B3DC;
+	border-collapse: collapse;
+	color: #000000;
+	width: 100%;
+}
+
+.table thead th,.tableHeaderTable td {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #D7E9F5 none repeat scroll 0 0;
+	border: 1px solid #E0E0E0;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+}
+
+.table td,.table th,.tableHeaderTable td {
+	border: 1px solid #E0E0E0;
+	padding: 0.5em;
+}
+
+.table tr.odd {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #FFFFFF none repeat scroll 0 0;
+	border-top: 1px solid #C0C0C0;
+	color: #000000;
+}
+
+.table tr.even {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #EEEEEE none repeat scroll 0 0;
+	border-top: 1px solid #C0C0C0;
+	color: #000000;
+}
+
+.table tbody tr:hover,.table tr.over,.contribTable tr:hover {
+	background: none repeat scroll 0 0 #FFFFD9 !important;
+}
+
+/* END TABLE */
+hr {
+	display: none;
+}
+
+div.hr {
+	height: 1px;
+	margin: 1.5em 10px;
+	border-bottom: 1px dotted black;
+}
+/* END TYPOGRAPHY */
