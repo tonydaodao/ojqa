@@ -1,6 +1,17 @@
 #summary 介绍了本项目中所用到的技术
 
 
-== 开发技术 ==
+== 框架（开发） ==
  * jpa(hibnerate)
  * spring(springMVC)
+
+== 构建工具 ==
+ * maven
+  # maven插件1
+  # maven插件1
+
+== IDE ==
+ * eclipse
+
+== 源码管理工具 ==
+ * svn
