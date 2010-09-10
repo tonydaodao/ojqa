@@ -1,0 +1,137 @@
+/* A CSS Framework by Mike Stenhouse of Content with Style */
+	/* SITE SPECIFIC LAYOUT */
+body {
+	margin: 0;
+	padding: 0;
+	background: white url(../../images/background.gif) repeat-x scroll left top
+		;;
+	text-align: center;
+}
+
+div#page {
+	width: 780px;
+	/*
+	background: white;
+	*/
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+/* HEADER */
+div#header {
+	height: 79px;
+	margin: 0 0 5em;
+	padding: 6px 0 2px 10px;
+	text-align: left;
+	/*
+	color: white;
+	background: black;
+	*/
+}
+
+div#branding {
+	float: left;
+	width: 50%;
+	margin: 0;
+	padding: 10px 0 10px 30px;
+	text-align: left;
+}
+
+div#search {
+	float: right;
+	width: 49%;
+	margin: 0;
+	padding: 16px 20px 0 0;
+	text-align: right;
+}
+
+/* END HEADER */ /* CONTENT */
+div#content {
+	
+}
+
+/* MAIN */
+div#main {
+	padding-left: 15px;
+}
+
+div#main form ul li {
+	list-style-type: none;
+	margin-left: 0;
+}
+
+/* END MAIN */ /* SUB */
+div#sub {
+	
+}
+
+/* END SUB */ /* END CONTENT */ /* FOOTER */
+div#footer {
+	color: #444444;
+	font-size: 0.9em;
+	padding: 0 39px;
+	text-align: left;
+}
+
+div#footer div#divider {
+	border-top: 1px solid #CCCCCC;
+	margin: 0 0 4px;
+}
+
+div#footer div#divider div {
+	border-top: 6px solid #EBF5FC;
+	margin: 1px 0 0;
+}
+
+div#footer p {
+	font-size: 0.8em;
+	margin: 0;
+	padding: 15px;
+}
+
+div#footer .left {
+	float: left;
+}
+
+div#footer .right {
+	float: right;
+}
+
+/* END FOOTER */ /* END LAYOUT */ /* UL.SUBNAV */
+ul.subnav {
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	list-style: none;
+}
+
+ul.subnav li {
+	margin: 0 0 1em 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.subnav li a,ul.subnav li a:link,ul.subnav li a:visited,ul.subnav li a:active
+	{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+ul.subnav li a:hover {
+	text-decoration: underline;
+}
+
+ul.subnav li strong {
+	padding: 0 0 0 12px;
+	background: url("../../i/subnav-highlight.gif") left top no-repeat
+		transparent;
+}
+
+ul.subnav li strong a,ul.subnav li strong a:link,ul.subnav li strong a:visited,ul.subnav li strong a:active
+	{
+	color: white;
+	background-color: black;
+}
+/* END UL.SUBNAV */
