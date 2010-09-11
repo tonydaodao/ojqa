@@ -8,9 +8,10 @@ import org.ojqa.domain.pojo.User;
  */
 public interface UserService extends BaseService<User> {
 
-    /** Get User by userName.
+    /**
      * @param pName
-     * @return User
+     *            the name of the User
+     * @return a user instance
      */
     User getByName(String pName);
 

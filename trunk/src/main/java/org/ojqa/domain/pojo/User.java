@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.ojqa.domain.pojo;
 
 import java.util.Date;
@@ -14,86 +11,153 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
  * @author ybak
- * 
  */
 @Entity
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User extends IdEntity {
+    /**
+     * Name of User.
+     */
     private String name;
+    /**
+     * Password of User.
+     */
     private String password;
+    /**
+     * ConfirmPassword of User will not be persistented.
+     */
     private String confirmPassword;
+    /**
+     * Created time of User.
+     */
     private Date createTime;
 
+    /**
+     * Get password of User.
+     * 
+     * @return password.
+     */
     @Column(nullable = false)
-    public String getPassword() {
+    public final String getPassword() {
         return password;
     }
 
-    public void setPassword(String pPassword) {
+    /**
+     * Get password of user.
+     * 
+     * @param pPassword
+     *            password
+     */
+    public final void setPassword(final String pPassword) {
         this.password = pPassword;
     }
 
+    /**
+     * get confirmPassword, from form for validation usage.
+     * 
+     * @return confirmed password.
+     */
     @Transient
-    public String getConfirmPassword() {
+    public final String getConfirmPassword() {
         return confirmPassword;
     }
 
-    public void setConfirmPassword(String pConfirmPassword) {
+    /**
+     * set confirmed password.
+     * 
+     * @param pConfirmPassword
+     *            confirmed password.
+     */
+    public final void setConfirmPassword(final String pConfirmPassword) {
         this.confirmPassword = pConfirmPassword;
     }
 
+    /**
+     * Get Name of User.
+     * 
+     * @return name
+     */
     @Column(nullable = false, unique = true)
-    public String getName() {
+    public final String getName() {
         return name;
     }
 
-    public void setName(String pName) {
+    /**
+     * Set the name of user.
+     * 
+     * @param pName
+     *            name
+     */
+    public final void setName(final String pName) {
         this.name = pName;
     }
 
+    /**
+     * Getter method.
+     * 
+     * @return create time
+     */
     @Column(name = "create_time")
-    public Date getCreateTime() {
+    public final Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date pCreateTime) {
+    /**
+     * Setter.
+     * 
+     * @param pCreateTime
+     *            create time
+     */
+    public final void setCreateTime(final Date pCreateTime) {
         this.createTime = pCreateTime;
     }
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((createTime == null) ? 0 : createTime.hashCode());
+        result =
+                prime * result
+                        + ((createTime == null) ? 0 : createTime.hashCode());
         result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((password == null) ? 0 : password.hashCode());
+        result =
+                prime * result + ((password == null) ? 0 : password.hashCode());
         return result;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
+    public final boolean equals(final Object obj) {
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
-        User other = (User) obj;
+        }
+        final User other = (User) obj;
         if (createTime == null) {
-            if (other.createTime != null)
+            if (other.createTime != null) {
                 return false;
-        } else if (!createTime.equals(other.createTime))
+            }
+        } else if (!createTime.equals(other.createTime)) {
             return false;
+        }
         if (name == null) {
-            if (other.name != null)
+            if (other.name != null) {
                 return false;
-        } else if (!name.equals(other.name))
+            }
+        } else if (!name.equals(other.name)) {
             return false;
+        }
         if (password == null) {
-            if (other.password != null)
+            if (other.password != null) {
                 return false;
-        } else if (!password.equals(other.password))
+            }
+        } else if (!password.equals(other.password)) {
             return false;
+        }
         return true;
     }
 

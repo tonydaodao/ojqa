@@ -21,11 +21,16 @@ public class Comment extends IdEntity {
     private Date createDate;
     private Date lastModified;
 
+    /**
+     * getter
+     * 
+     * @return create date
+     */
     public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date pCreateDate) {
+    public void setCreateDate(final Date pCreateDate) {
         this.createDate = pCreateDate;
     }
 
@@ -33,7 +38,7 @@ public class Comment extends IdEntity {
         return lastModified;
     }
 
-    public void setLastModified(Date pLastModified) {
+    public void setLastModified(final Date pLastModified) {
         this.lastModified = pLastModified;
     }
 
@@ -42,7 +47,7 @@ public class Comment extends IdEntity {
         return content;
     }
 
-    public void setContent(String pContent) {
+    public void setContent(final String pContent) {
         this.content = pContent;
     }
 }
