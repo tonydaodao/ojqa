@@ -1,3 +1,5 @@
+# summary 代码规范相关
+
 =1.代码规范=
 
 参考 [http://www.oracle.com/technetwork/java/codeconv-138413.html sun的代码规范]
