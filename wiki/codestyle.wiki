@@ -1,1 +1,8 @@
-#summary 代码风格
+=代码规范=
+
+参考 [http://www.oracle.com/technetwork/java/codeconv-138413.html sun的代码规范]
+
+=checkstyle=
+
+
+
