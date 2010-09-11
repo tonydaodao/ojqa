@@ -18,27 +18,31 @@ import org.springframework.test.AbstractTransactionalDataSourceSpringContextTest
  * 
  */
 @SuppressWarnings("deprecation")
-public abstract class BaseJPATest extends AbstractTransactionalDataSourceSpringContextTests {
+public abstract class BaseJPATest extends
+AbstractTransactionalDataSourceSpringContextTests {
 
     public BaseJPATest() {
         super();
     }
 
-    public BaseJPATest(String name) {
+    public BaseJPATest(final String name) {
         super(name);
     }
 
     @Override
     protected String[] getConfigLocations() {
-        return new String[] { "applicationContext.xml", "applicationContext-test.xml" };
+        return new String[] { "applicationContext.xml",
+        "applicationContext-test.xml" };
     }
 
     @Override
     protected void onSetUpInTransaction() throws Exception {
-        DataSource dataSource = jdbcTemplate.getDataSource();
+        DataSource dataSource = this.jdbcTemplate.getDataSource();
         Connection con = DataSourceUtils.getConnection(dataSource);
         IDatabaseConnection dbUnitCon = new DatabaseConnection(con);
-        IDataSet dataSet = new FlatXmlDataSet(new FileInputStream("./src/test/resources/dbunit-test-data/User.xml"));
+        IDataSet dataSet =
+            new FlatXmlDataSet(new FileInputStream(
+                    "./src/test/resources/dbunit-test-data/User.xml"));
 
         try {
             DatabaseOperation.REFRESH.execute(dbUnitCon, dataSet);
