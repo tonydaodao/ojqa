@@ -16,8 +16,8 @@
     <div id="page">
         <div id="header" class="clearfix">
             <div id="branding">
-                <h1><a href="<c:url value='/'/>">ACTM</a></h1>
-                <p>A refactory version of store.</p>
+                <h1><a href="<c:url value='/'/>">OJQA</a></h1>
+                <p>an OpenSource Q&A system</p>
             </div>
         </div>
         

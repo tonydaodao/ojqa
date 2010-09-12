@@ -18,18 +18,18 @@ import org.springframework.transaction.annotation.Transactional;
 public class JPAUserRepositoryImpl extends JPARepositoryImpl<User> implements UserRepository {
 
     @Override
-    public void save(User entity) {
+    public void save(final User entity) {
         if (entity.getId() == null) {
             entity.setCreateTime(new Date());
         }
         super.save(entity);
     }
 
-    @SuppressWarnings("unchecked")
-    public User getByName(String pName) {
-        List<User> result = getJpaTemplate().find("select u from User u where u.name = ?", pName);
-        if (result.size() == 0)
+    public User getByName(final String pName) {
+        List<User> result = this.getJpaTemplate().find("select u from User u where u.name = ?", pName);
+        if (result.size() == 0) {
             return null;
+        }
         return result.get(0);
     }
 

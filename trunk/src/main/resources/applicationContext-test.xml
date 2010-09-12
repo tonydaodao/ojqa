@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:amq="http://activemq.apache.org/schema/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:amq="http://activemq.apache.org/schema/core"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
                         http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
                         http://www.springframework.org/schema/tx
-                        http://www.springframework.org/schema/tx/spring-tx.xsd">
+                        http://www.springframework.org/schema/tx/spring-tx.xsd"
+>
 
-	<!-- database -->
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="${test.jdbc.driver.name}" />
-		<property name="url" value="${test.jdbc.url}" />
-		<property name="username" value="${test.jdbc.user.name}" />
-		<property name="password" value="${test.jdbc.user.password}" />
-	</bean>
+  <!-- database -->
+  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="${test.jdbc.driver.name}" />
+    <property name="url" value="${test.jdbc.url}" />
+    <property name="username" value="${test.jdbc.user.name}" />
+    <property name="password" value="${test.jdbc.user.password}" />
+  </bean>
 
-	<!-- LOCAL entity manager factory -->
-	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="actmUnit" />
-		<property name="dataSource" ref="dataSource" />
-		<property name="jpaVendorAdapter">
-			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-				<property name="showSql" value="${test.hibernate.showSql}" />
-				<property name="generateDdl" value="true" />
-				<property name="databasePlatform" value="${test.hibernate.dialect}" />
-			</bean>
-		</property>
-		<property name="jpaPropertyMap">
-            <map>
-                <entry key="hibernate.cache.use_query_cache" value="${test.hibernate.cache.use_query_cache}" />
-                <entry key="hibernate.generate_statistics" value="${test.hibernate.generate_statistics}" />
-                <entry key="hibernate.cache.use_second_level_cache" value="${test.hibernate.use_second_level_cache}" />
-                <entry key="hibernate.cache.provider_class" value="${test.hibernate.cache.provider_class}" />
-                <entry key="hibernate.cache.provider_configuration_file_resource_path"
-                    value="${test.hibernate.ehcache_config_file}" />
-            </map>
-        </property>
-	</bean>
-
+  <!-- LOCAL entity manager factory -->
+  <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="persistenceUnitName" value="actmUnit" />
+    <property name="dataSource" ref="dataSource" />
+    <property name="jpaVendorAdapter">
+      <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="showSql" value="${test.hibernate.showSql}" />
+        <property name="generateDdl" value="true" />
+        <property name="databasePlatform" value="${test.hibernate.dialect}" />
+      </bean>
+    </property>
+    <property name="jpaPropertyMap">
+      <map>
+        <entry key="hibernate.cache.use_query_cache" value="${test.hibernate.cache.use_query_cache}" />
+        <entry key="hibernate.generate_statistics" value="${test.hibernate.generate_statistics}" />
+        <entry key="hibernate.cache.use_second_level_cache" value="${test.hibernate.use_second_level_cache}" />
+        <entry key="hibernate.cache.provider_class" value="${test.hibernate.cache.provider_class}" />
+        <entry key="hibernate.cache.provider_configuration_file_resource_path" value="${test.hibernate.ehcache_config_file}" />
+      </map>
+    </property>
+  </bean>
 </beans>
