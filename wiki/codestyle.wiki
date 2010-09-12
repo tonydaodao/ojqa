@@ -10,3 +10,7 @@
  # 去掉对Package Javadoc的检查
  # 将对Type Javadoc的严重级别提升到error
  # 将max line length改为120
+
+=3.xml style=
+
+xml中使用2个空格代替tab
