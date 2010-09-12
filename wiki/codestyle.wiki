@@ -9,3 +9,4 @@
 对checkstyle eclipse plugin自带的sun check做了以下修改:
  # 去掉对Package Javadoc的检查
  # 将对Type Javadoc的严重级别提升到error
+ # 将max line length改为120
