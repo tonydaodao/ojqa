@@ -7,5 +7,6 @@
 	    <menu:displayMenu name="UserMenu"/>
 	    <menu:displayMenu name="AdminMenu"/>
 	    <menu:displayMenu name="Logout"/>
+	    <menu:displayMenu name="AskQuestion"/>
 	</ul>
 </menu:useMenuDisplayer>

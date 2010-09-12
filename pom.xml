@@ -6,13 +6,13 @@
   <groupId>org.ojqa</groupId>
   <artifactId>ojqa</artifactId>
   <packaging>war</packaging>
-  <version>springMVC</version>
-  <name>actm</name>
+  <version>0.5.1</version>
+  <name>ojqa</name>
   <url>http://www.ojqa.org</url>
   <scm>
-    <connection>scm:svn:https://actm.googlecode.com/svn/branches/springMVC</connection>
+    <connection>scm:svn:https://ojqa.googlecode.com/svn/trunk</connection>
   </scm>
-  <description>store refactory version</description>
+  <description>open java question and answer system</description>
   <dependencies>
     <!-- util -->
     <dependency>
@@ -50,14 +50,10 @@
 
     <!--  Struts 2 -->
     <!--
-      <dependency> <groupId>org.apache.struts</groupId>
-      <artifactId>struts2-core</artifactId>
-      <version>${struts.version}</version> </dependency> <dependency>
-      <groupId>org.apache.struts</groupId>
-      <artifactId>struts2-sitemesh-plugin</artifactId>
-      <version>${struts.version}</version> </dependency> <dependency>
-      <groupId>org.apache.struts</groupId>
-      <artifactId>struts2-spring-plugin</artifactId>
+      <dependency> <groupId>org.apache.struts</groupId> <artifactId>struts2-core</artifactId>
+      <version>${struts.version}</version> </dependency> <dependency> <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-sitemesh-plugin</artifactId> <version>${struts.version}</version> </dependency> <dependency>
+      <groupId>org.apache.struts</groupId> <artifactId>struts2-spring-plugin</artifactId>
       <version>${struts.version}</version> </dependency>
     -->
     <dependency>
@@ -225,13 +221,13 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>cobertura</groupId>
+      <groupId>net.sourceforge.cobertura</groupId>
       <artifactId>cobertura</artifactId>
-      <version>1.9rc1</version>
+      <version>1.9.4.1</version>
     </dependency>
   </dependencies>
   <build>
-    <finalName>actm</finalName>
+    <finalName>ojqa</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -243,20 +239,14 @@
 
       <!-- HIBERNATE 3 PLUGIN - this can output the DDL to a file -->
       <!--
-        <plugin> <groupId>org.codehaus.mojo</groupId>
-        <artifactId>hibernate3-maven-plugin</artifactId>
-        <version>2.2</version> <executions> <execution>
-        <phase>process-classes</phase> <goals> <goal>hbm2ddl</goal>
-        </goals> </execution> </executions> <configuration> <components>
-        <component> <name>hbm2ddl</name>
-        <implementation>annotationconfiguration</implementation>
-        </component> </components> <componentProperties>
-        <implementation>jpaconfiguration</implementation>
-        <persistenceunit>actmUnit</persistenceunit>
+        <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>hibernate3-maven-plugin</artifactId>
+        <version>2.2</version> <executions> <execution> <phase>process-classes</phase> <goals> <goal>hbm2ddl</goal>
+        </goals> </execution> </executions> <configuration> <components> <component> <name>hbm2ddl</name>
+        <implementation>annotationconfiguration</implementation> </component> </components> <componentProperties>
+        <implementation>jpaconfiguration</implementation> <persistenceunit>actmUnit</persistenceunit>
         <outputfilename>myschema.ddl</outputfilename>
-        <propertyfile>${basedir}/src/main/resources/database.properties</propertyfile>
-        <drop>false</drop> <create>true</create> <export>false</export>
-        <format>true</format> </componentProperties> </configuration>
+        <propertyfile>${basedir}/src/main/resources/database.properties</propertyfile> <drop>false</drop>
+        <create>true</create> <export>false</export> <format>true</format> </componentProperties> </configuration>
         </plugin>
       -->
       <plugin>
@@ -270,6 +260,11 @@
           <scanIntervalSeconds>10</scanIntervalSeconds>
           <stopKey>stop</stopKey>
           <stopPort>8005</stopPort>
+          <connectors>
+            <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+              <port>9090</port>
+            </connector>
+          </connectors>
         </configuration>
       </plugin>
       <plugin>
@@ -295,7 +290,7 @@
         </executions>
         <configuration>
           <configLocation>${checkstyle.config.file}</configLocation>
-          <consoleOutput>true</consoleOutput>
+          <consoleOutput>false</consoleOutput>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <enableRulesSummary>true</enableRulesSummary>
           <failsOnError>true</failsOnError>
@@ -361,7 +356,7 @@
             <artifactId>chronos-maven-plugin</artifactId>
             <version>1.0-SNAPSHOT</version>
             <configuration>
-              <input>${basedir}/src/test/jmeter/ActmUsers.jmx</input>
+              <input>${basedir}/src/test/jmeter/OjqaUsers.jmx</input>
             </configuration>
             <executions>
               <execution>
@@ -384,9 +379,9 @@
             </dependencies>
             <configuration>
               <driver>com.mysql.jdbc.Driver</driver>
-              <url>jdbc:mysql://localhost/actm</url>
-              <username>actm</username>
-              <password>actm</password>
+              <url>jdbc:mysql://localhost/ojqa</url>
+              <username>ojqa</username>
+              <password>ojqa</password>
             </configuration>
             <executions>
               <execution>
@@ -425,6 +420,11 @@
               <scanIntervalSeconds>10</scanIntervalSeconds>
               <stopKey>stop</stopKey>
               <stopPort>8005</stopPort>
+              <connectors>
+                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                  <port>9090</port>
+                </connector>
+              </connectors>
             </configuration>
             <executions>
               <execution>
@@ -480,6 +480,11 @@
               <scanIntervalSeconds>10</scanIntervalSeconds>
               <stopKey>stop</stopKey>
               <stopPort>8005</stopPort>
+              <connectors>
+                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                  <port>9090</port>
+                </connector>
+              </connectors>
             </configuration>
             <executions>
               <execution>

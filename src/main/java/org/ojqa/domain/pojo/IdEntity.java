@@ -32,8 +32,8 @@ public class IdEntity {
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public final Long getId() {
-        return id;
+    public Long getId() {
+        return this.id;
     }
 
     /**
@@ -42,7 +42,7 @@ public class IdEntity {
      * @param pId
      *            id
      */
-    public final void setId(final Long pId) {
+    public void setId(final Long pId) {
         this.id = pId;
     }
 
