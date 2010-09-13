@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
->
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.ojqa</groupId>
   <artifactId>ojqa</artifactId>
@@ -301,6 +300,22 @@
         <artifactId>maven-eclipse-plugin</artifactId>
         <version>2.8</version>
         <configuration>
+          <additionalConfig>
+            <file>
+              <name>.checkstyle</name>
+              <content>
+                 <![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<fileset-config file-format-version="1.2.0" simple-config="false" sync-formatter="true">
+  <local-check-config name="maven-chekstyle-plugin" location="file:\${basedir}\misc\ojqa_checkstyle.xml" type="remote" description="Maven checkstyle configuration">
+  </local-check-config>
+  <fileset name="java-sources" enabled="true" check-config-name="maven-chekstyle-plugin" local="true">
+    <file-match-pattern match-pattern="src/main/java/" include-pattern="true"/>
+    <file-match-pattern match-pattern="src/test/java/" include-pattern="true"/>
+  </fileset>
+</fileset-config>]]>
+              </content>
+            </file>
+          </additionalConfig>
           <wtpversion>1.5</wtpversion>
         </configuration>
       </plugin>
