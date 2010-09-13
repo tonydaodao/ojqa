@@ -8,6 +8,6 @@
         <Menu name="UserMenu" title="menu.user" description="User Menu" page="/user/list" />
         <Menu name="AdminMenu" title="menu.admin" description="Cache Statistic" width="120" page="/cacheStat"/>
         <Menu name="Logout" title="user.logout" page="/j_spring_security_logout" />
-        <Menu name="AskQuestion" title="menu.ask.question" page="/j_spring_security_logout" />
+        <Menu name="AskQuestion" title="menu.ask.question" page="/question/ask" />
     </Menus>
 </MenuConfig>

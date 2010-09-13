@@ -6,6 +6,8 @@ import org.ojqa.domain.repository.Repository;
 import org.ojqa.service.BaseService;
 
 /**
+ * Base Service, all other service should extend from this class.
+ * 
  * @author ybak
  * 
  * @param <T>

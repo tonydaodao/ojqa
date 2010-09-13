@@ -25,6 +25,11 @@ public abstract class BaseController<T> {
         this.service = pService;
     }
 
+    /**
+     * Go to the form page.
+     * 
+     * @return the form path.
+     */
     @RequestMapping("")
     public String input() {
         return rootPath + "/form";
@@ -36,6 +41,11 @@ public abstract class BaseController<T> {
         return "redirect:" + rootPath + "/list";
     }
 
+    /**
+     * List all entities from repository.
+     * 
+     * @return entity list
+     */
     @RequestMapping("/list")
     public ModelMap list() {
         return new ModelMap(service.getAll());

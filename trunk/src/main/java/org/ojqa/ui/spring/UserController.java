@@ -24,6 +24,7 @@ public class UserController extends BaseController<User> {
         super(service);
     }
 
+    @Override
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String get(@PathVariable Long id, Model model) {
         User entity = getService().get(id);
