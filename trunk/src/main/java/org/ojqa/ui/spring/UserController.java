@@ -1,8 +1,8 @@
 package org.ojqa.ui.spring;
 
+import org.apache.commons.lang.StringUtils;
 import org.ojqa.domain.pojo.User;
 import org.ojqa.service.UserService;
-import org.ojqa.ui.spring.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,27 +20,39 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/user")
 public class UserController extends BaseController<User> {
     @Autowired
-    public UserController(UserService service) {
+    public UserController(final UserService service) {
         super(service);
     }
 
     @Override
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String get(@PathVariable Long id, Model model) {
-        User entity = getService().get(id);
+    public String get(@PathVariable final Long id, final Model model) {
+        User entity = this.getService().get(id);
         entity.setConfirmPassword(entity.getPassword());
         model.addAttribute("entity", entity);
-        return getRootPath() + "/form";
+        return this.getRootPath() + "/form";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String save(@ModelAttribute("entity") User entity, BindingResult result) {
-        UserValidator.validate(entity, result);
+    public String save(@ModelAttribute("entity") final User entity, final BindingResult result) {
+        this.validate(entity, result);
         if (result.hasErrors()) {
-            return getRootPath() + "/form";
+            return this.getRootPath() + "/form";
         } else {
-            getService().save(entity);
-            return "redirect:" + getRootPath() + "/list";
+            this.getService().save(entity);
+            return "redirect:" + this.getRootPath() + "/list";
+        }
+    }
+
+    private void validate(final User entity, final BindingResult result) {
+        if (!StringUtils.isNotBlank(entity.getName())) {
+            result.rejectValue("name", "required", "required");
+        }
+        if (!StringUtils.isNotBlank(entity.getPassword())) {
+            result.rejectValue("password", "required", "required");
+        }
+        if (!StringUtils.isNotBlank(entity.getConfirmPassword())) {
+            result.rejectValue("confirmPassword", "required", "required");
         }
     }
 }
