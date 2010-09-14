@@ -28,7 +28,7 @@ public class QuestionController {
      */
     private JpaTemplate jpaTemplate;
 
-    @RequestMapping("/ask")
+    @RequestMapping("")
     public String input() {
         return "question/form";
     }

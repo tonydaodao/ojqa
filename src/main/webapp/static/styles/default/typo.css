@@ -61,7 +61,7 @@ h3 {
 	font-size: 1.4em;
 	font-weight:bold;
 	line-height: 1.3em;
-	margin: 0 0 0.5em 0;
+	margin: 0 0 0.2em 0;
 	padding: 0;
 	color: #B4C24B;
 }
@@ -253,4 +253,5 @@ div.hr {
 	margin: 1.5em 10px;
 	border-bottom: 1px dotted black;
 }
+
 /* END TYPOGRAPHY */

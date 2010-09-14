@@ -21,9 +21,10 @@ div#page {
 /* HEADER */
 div#header {
 	height: 79px;
-	margin: 0 0 5em;
+	margin: 0 0 4em;
 	padding: 6px 0 2px 10px;
 	text-align: left;
+	position:relative;
 	/*
 	color: white;
 	background: black;

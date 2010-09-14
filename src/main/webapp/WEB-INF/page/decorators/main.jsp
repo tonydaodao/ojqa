@@ -24,14 +24,14 @@
             an OpenSource Q&A system
           </p>
         </div>
-      </div>
-      <div id="content" class="clearfix">
 		<div id="nav">
           <div class="wrapper">
             <h2 class="accessibility">Navigation</h2>
             <jsp:include page="../common/menu.jsp" />
           </div><hr/>
         </div>
+      </div>
+      <div id="content" class="clearfix">
         <div id="main">
           <%@ include file="../common/messages.jsp" %><decorator:body/><hr/>
         </div>

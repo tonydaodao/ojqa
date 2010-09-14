@@ -52,12 +52,12 @@
 
 	<!-- Servlets -->
 	<servlet>
-		<servlet-name>actm</servlet-name>
+		<servlet-name>ojqa</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>actm</servlet-name>
+		<servlet-name>ojqa</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
