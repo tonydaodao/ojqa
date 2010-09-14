@@ -6,7 +6,6 @@ import java.util.List;
 import org.ojqa.domain.pojo.User;
 import org.ojqa.domain.repository.UserRepository;
 import org.ojqa.service.UserService;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

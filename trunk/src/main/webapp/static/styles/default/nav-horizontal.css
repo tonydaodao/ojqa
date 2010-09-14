@@ -88,6 +88,10 @@ div#nav strong a,div#nav strong a:link,div#nav strong a:active,div#nav strong a:
 	background-color: black;
 }
 
+div#nav .last{
+	float: right;
+}
+
 ul#primary-nav li a {
 	color: #777777;
 	display: block;
