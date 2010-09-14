@@ -7,6 +7,8 @@
 	    <menu:displayMenu name="UserMenu"/>
 	    <menu:displayMenu name="AdminMenu"/>
 	    <menu:displayMenu name="Logout"/>
-	    <menu:displayMenu name="AskQuestion"/>
+		<div class="last">
+	    	<menu:displayMenu name="AskQuestion"/>
+		</div>
 	</ul>
 </menu:useMenuDisplayer>

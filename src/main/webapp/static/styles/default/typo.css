@@ -46,6 +46,7 @@ h1 {
 	margin: 0;
 	padding: 0;
 	color: #1465B7;
+	font-weight: bold;
 }
 
 h2 {
@@ -57,7 +58,8 @@ h2 {
 }
 
 h3 {
-	font-size: 2.2em;
+	font-size: 1.4em;
+	font-weight:bold;
 	line-height: 1.3em;
 	margin: 0 0 0.5em 0;
 	padding: 0;
