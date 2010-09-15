@@ -28,6 +28,7 @@
     </property>
     <property name="jpaPropertyMap">
       <map>
+        <entry key="hibernate.hbm2ddl.auto" value="${dev.hibernate.hbm2ddl.auto}" />
         <entry key="hibernate.cache.use_query_cache" value="${dev.hibernate.cache.use_query_cache}" />
         <entry key="hibernate.generate_statistics" value="${dev.hibernate.generate_statistics}" />
         <entry key="hibernate.cache.use_second_level_cache" value="${dev.hibernate.use_second_level_cache}" />

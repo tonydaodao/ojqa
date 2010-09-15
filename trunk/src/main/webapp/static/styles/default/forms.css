@@ -44,6 +44,7 @@ form li p {
 	color: #444444;
 	font-size: 9px;
 	line-height: 13px;
+	margin:0;
 }
 
 form .info {
@@ -90,8 +91,16 @@ form div.submit input {
 	width: 15em;
 }
 
-form .large,form textarea.textarea {
+form .middle {
 	width: 349px;
+}
+
+form .large {
+	width: 500px;
+}
+
+form .full,form textarea.textarea {
+	width: 100%;
 }
 
 label {

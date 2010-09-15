@@ -18,7 +18,7 @@
 	                <form:errors path="entity.name" cssClass="errorMessage"/>
                 </label>
              </div>
-    	     <input type="text" name="name" class="text large" value="${entity.name}">
+    	     <input type="text" name="name" class="text middle" value="${entity.name}">
 	         <div>
 	             <div class="left">
 	                 <label class="desc" for="addUser_user_password">Password <span class="req">*</span>

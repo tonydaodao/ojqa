@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.Type;
 
 /**
  * Question entity class.
@@ -23,7 +24,7 @@ public class Question extends IdEntity {
     private Date createTime;
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -31,15 +32,16 @@ public class Question extends IdEntity {
     }
 
     public String getTagNames() {
-        return tagNames;
+        return this.tagNames;
     }
 
     public void setTagNames(String tagNames) {
         this.tagNames = tagNames;
     }
 
+    @Type(type = "text")
     public String getBody() {
-        return body;
+        return this.body;
     }
 
     public void setBody(String body) {
@@ -47,7 +49,7 @@ public class Question extends IdEntity {
     }
 
     public Date getCreateTime() {
-        return createTime;
+        return this.createTime;
     }
 
     public void setCreateTime(Date createTime) {

@@ -4,33 +4,34 @@ import com.thoughtworks.selenium.SeleneseTestCase;
 
 /**
  * @author ybak
- *
+ * 
  */
 public class SimpleIntegrationTest extends SeleneseTestCase {
+    @Override
     public void setUp() throws Exception {
-        setUp("http://localhost:8080/", "*chrome");
+        setUp("http://localhost:9090/", "*chrome");
     }
 
     public void testUntitled() throws Exception {
-        selenium.windowMaximize();
-        selenium.setSpeed("2000");
-        selenium.open("/actm/spring_security_login");
-        selenium.type("j_username", "rod");
-        selenium.type("j_password", "koala");
-        selenium.click("submit");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[@id='main']/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.type("name", "newUser");
-        selenium.type("password", "password");
-        selenium.type("confirmPassword", "Password");
-        selenium.click("//input[@value='Submit']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[@id='main']/table/tbody/tr");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[@id='main']/form/ul/li[3]/a");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("link=Logout");
-        selenium.waitForPageToLoad("30000");
+        this.selenium.windowMaximize();
+        this.selenium.setSpeed("2000");
+        this.selenium.open("/actm/spring_security_login");
+        this.selenium.type("j_username", "rod");
+        this.selenium.type("j_password", "koala");
+        this.selenium.click("submit");
+        this.selenium.waitForPageToLoad("30000");
+        this.selenium.click("//div[@id='main']/a/span");
+        this.selenium.waitForPageToLoad("30000");
+        this.selenium.type("name", "newUser");
+        this.selenium.type("password", "password");
+        this.selenium.type("confirmPassword", "Password");
+        this.selenium.click("//input[@value='Submit']");
+        this.selenium.waitForPageToLoad("30000");
+        this.selenium.click("//div[@id='main']/table/tbody/tr");
+        this.selenium.waitForPageToLoad("30000");
+        this.selenium.click("//div[@id='main']/form/ul/li[3]/a");
+        this.selenium.waitForPageToLoad("30000");
+        this.selenium.click("link=Logout");
+        this.selenium.waitForPageToLoad("30000");
     }
 }
