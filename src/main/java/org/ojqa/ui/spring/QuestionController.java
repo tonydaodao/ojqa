@@ -28,14 +28,14 @@ public class QuestionController {
      */
     private JpaTemplate jpaTemplate;
 
-    @RequestMapping("")
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String input() {
         return "question/form";
     }
 
     @Transactional
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String save(@ModelAttribute("entity") Question entity, BindingResult result) {
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public String save(@ModelAttribute("question") Question entity, BindingResult result) {
         this.jpaTemplate.persist(entity);
         return "redirect:/";
     }

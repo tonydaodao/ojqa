@@ -8,25 +8,25 @@
   <h3>Ask a question</h3>
 </div>
 <div>
-  <form action="<c:url value="add"/>" method="post">
+  <form action="" method="post">
     <ul>
       <li>
-        <label class="info">title:</label>
-        <input type="text" name="title" class="text large" value="${entity.title}"/>
-        <label class="desc">please enter a descriptive title for your question</label>
+        <label class="desc">title:</label>
+        <input type="text" name="title" class="text large" value="${question.title}"/>
+        <p>please enter a descriptive title for your question</p>
       </li>
       <li>
-        <label class="info">title</label>
-        <input type="text" name="tagNames" class="text large" value="${entity.tagNames}"/>
-        <label class="desc">please enter a descriptive title for your question</label>
+        <label class="desc">content:</label>
+		<textarea name="body" class="textarea" cols="40" rows="10"  value="${question.body}"></textarea>
+        <p>please enter a descriptive title for your question</p>
       </li>
       <li>
-        <label class="info">title</label>
-        <input type="text" name="tagNames" class="text large" value="${entity.tagNames}"/>
-        <label class="desc">please enter a descriptive title for your question</label>
+        <label class="desc">tags: (required)</label>
+        <input type="text" name="tagNames" class="text large" value="${question.tagNames}"/>
+        <p>Tags are short keywords, with no spaces within. At least 1 and up to 5 tags can be used. </p>
       </li>
       <li>
-        <input type="submit" value="Submit"/><input type="reset"/>
+        <input type="submit" value="Ask Your Question"/>
       </li>
     </ul>
   </form>
