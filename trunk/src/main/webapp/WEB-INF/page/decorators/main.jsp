@@ -4,27 +4,22 @@
   <head>
     <title><decorator:title default="Struts Starter" /></title>
     <link href="<spring:url value='/static/styles/main.css'/>" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="<c:url value='/static/scripts/jquery-1.4.2.min.js'/>">
-    </script>
-    <script type="text/javascript" src="<c:url value='/static/scripts/jquery-ui-1.8.custom.min.js'/>">
-    </script>
-    <script type="text/javascript" src="<c:url value='/static/scripts/global.js'/>">
-    </script>
+    <script type="text/javascript" src="<c:url value='/static/scripts/jquery-1.4.2.min.js'/>"></script>
+    <script type="text/javascript" src="<c:url value='/static/scripts/jquery-ui-1.8.custom.min.js'/>"></script>
+    <script type="text/javascript" src="<c:url value='/static/scripts/global.js'/>"></script>
     <decorator:head/>
   </head>
   <body id="page-home">
-	<c:set var="currentMenu" scope="request">
+    <c:set var="currentMenu" scope="request">
       <decorator:getProperty property="meta.menu" />
     </c:set>
     <div id="page">
       <div id="header" class="clearfix">
         <div id="branding">
           <h1><a href="<c:url value='/'/>">OJQA</a></h1>
-          <p>
-            an OpenSource Q&A system
-          </p>
+          <p>an OpenSource Q&A system</p>
         </div>
-		<div id="nav">
+        <div id="nav">
           <div class="wrapper">
             <h2 class="accessibility">Navigation</h2>
             <jsp:include page="../common/menu.jsp" />
@@ -40,17 +35,12 @@
         </div>
       </div>
       <div id="footer" class="clearfix">
-        <div id="divider">
-        </div>
+        <div id="divider"></div>
         <span class="left">Version: 0.0.1</span>
         <span class="right">&copy; 2010-2010 <a href="#">Isaac</a></span>
       </div>
     </div>
-    <div id="extra1">
-      &nbsp;
-    </div>
-    <div id="extra2">
-      &nbsp;
-    </div>
+    <div id="extra1">&nbsp;</div>
+    <div id="extra2">&nbsp;</div>
   </body>
 </html>

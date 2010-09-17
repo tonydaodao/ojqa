@@ -3,6 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="menu" content="AskQuestion"/>
   <title>Ask a question | OJQA</title>
+  <script type="text/javascript" src="<c:url value='/static/scripts/wmd/wmd.js'/>"></script>
 </head>
 <div id="main-bar">
   <h3>Ask a question</h3>
@@ -16,9 +17,8 @@
         <p>please enter a descriptive title for your question</p>
       </li>
       <li>
-        <label class="desc">content:</label>
-		<textarea name="body" class="textarea" cols="40" rows="10"  value="${question.body}"></textarea>
-        <p>please enter a descriptive title for your question</p>
+        <textarea name="body" class="textarea" id="myTextarea" cols="40" rows="10" value="${question.body}"></textarea>
+        <div class="wmd-preview"></div>
       </li>
       <li>
         <label class="desc">tags: (required)</label>
