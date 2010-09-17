@@ -44,7 +44,7 @@ form li p {
 	color: #444444;
 	font-size: 9px;
 	line-height: 13px;
-	margin:0;
+	margin: 0;
 }
 
 form .info {
@@ -160,23 +160,22 @@ input,select {
 }
 
 input[type].ui-button {
-	padding:0.2em 0.2em;
+	padding: 0.2em 0.2em;
 }
 
-a.delete-button{
-	top:0.134em;
-	left:38%;
+a.delete-button {
+	top: 0.134em;
+	left: 38%;
 }
 
 a.add-button {
-	float:right;
-	top:-2.3em;
+	float: right;
+	top: -2.3em;
 }
 
-.ui-button-text-only span.ui-button-text{
-	padding:0.185em;
+.ui-button-text-only span.ui-button-text {
+	padding: 0.185em;
 }
-
 
 textarea {
 	width: 200px;
@@ -246,6 +245,19 @@ div.wwlbl {
 	color: #FF9900;
 	font-size: 1em !important;
 	font-weight: bold;
+}
+
+.wmd-preview {
+	background-color: #F5F5F5;
+	margin-top: 10px;
+	min-height: 20px;
+	padding: 6px;
+	width: 98%;
+}
+
+div.wmd-preview p {
+	font-size: 13px;
+	line-height: 140%;
 }
 
 .highlight {
