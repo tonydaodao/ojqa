@@ -13,6 +13,11 @@
   </scm>
   <description>open java question and answer system</description>
   <dependencies>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>3.0.2</version>
+    </dependency>
     <!-- util -->
     <dependency>
       <groupId>log4j</groupId>
