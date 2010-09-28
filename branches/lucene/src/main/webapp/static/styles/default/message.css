@@ -1,0 +1,24 @@
+div.error,span.error,li.error,div.message {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #FFFFCC none repeat scroll 0 0;
+	border: 1px solid #000000;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 10px auto;
+	padding: 3px;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+input.error,div.error,span.error,li.error {
+	border: 2px solid red;
+}
+
+span.fieldError,.errorMessage {
+	color: red;
+	font-size: 0.95em;
+	font-weight: bold;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:amq="http://activemq.apache.org/schema/core"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="classpath:database.properties" />
+  </bean>
+  
+  <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+  
+  <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+    <property name="entityManagerFactory" ref="entityManagerFactory" />
+    <property name="dataSource" ref="dataSource" />
+  </bean>
+  
+  <tx:annotation-driven transaction-manager="transactionManager" />
+  
+  <bean id="jpaTemplate" class="org.springframework.orm.jpa.JpaTemplate">
+    <property name="entityManagerFactory" ref="entityManagerFactory" />
+  </bean>
+
+  <!-- repository -->
+  <bean id="userRepository" class="org.ojqa.domain.repository.jpa.JPAUserRepositoryImpl">
+    <property name="jpaTemplate" ref="jpaTemplate" />
+  </bean>
+  <bean id="commentRepository" class="org.ojqa.domain.repository.jpa.JPACommentRepositoryImpl">
+    <property name="jpaTemplate" ref="jpaTemplate" />
+  </bean>
+
+  <!-- service -->
+  <bean id="userService" class="org.ojqa.service.impl.UserServiceImpl">
+    <property name="repository" ref="userRepository" />
+  </bean>
+  <bean id="commentService" class="org.ojqa.service.impl.CommentServiceImpl">
+    <property name="repository" ref="commentRepository" />
+  </bean>
+
+  <!-- util -->
+  <bean id="jpaUtil" class="org.ojqa.domain.util.JpaUtil" scope="prototype">
+    <property name="jpaTemplate" ref="jpaTemplate" />
+  </bean>
+</beans>
