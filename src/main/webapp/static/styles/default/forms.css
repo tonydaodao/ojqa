@@ -161,6 +161,7 @@ input,select {
 
 input[type].ui-button {
 	padding: 0.2em 0.2em;
+	font: bold 120% arial, helvetica, verdana, sans-serif;
 }
 
 a.delete-button {
@@ -250,7 +251,7 @@ div.wwlbl {
 .wmd-preview {
 	background-color: #F5F5F5;
 	margin-top: 10px;
-	min-height: 20px;
+	min-height: 8px;
 	padding: 6px;
 	width: 98%;
 }

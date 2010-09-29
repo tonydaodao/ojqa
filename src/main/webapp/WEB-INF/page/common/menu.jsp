@@ -6,7 +6,6 @@
 	    <menu:displayMenu name="CommentMenu"/>
 	    <menu:displayMenu name="UserMenu"/>
 	    <menu:displayMenu name="AdminMenu"/>
-	    <menu:displayMenu name="Logout"/>
 		<div class="last">
 	    	<menu:displayMenu name="AskQuestion"/>
 		</div>
