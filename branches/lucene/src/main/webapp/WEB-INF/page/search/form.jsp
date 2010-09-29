@@ -17,7 +17,7 @@
 	        <p>Please input your key word.</p>
 	    </li>
 	    <li>
-    	     <input type="text" name="name" class="text middle">
+    	     <input type="text" name="keyword" class="text middle">
     	</li>
     </ul>
 </form>
