@@ -36,6 +36,8 @@
   <bean id="commentService" class="org.ojqa.service.impl.CommentServiceImpl">
     <property name="repository" ref="commentRepository" />
   </bean>
+  <bean id="searchService" class="org.ojqa.service.impl.SearchService">
+  </bean>
 
   <!-- util -->
   <bean id="jpaUtil" class="org.ojqa.domain.util.JpaUtil" scope="prototype">

@@ -5,16 +5,18 @@ public class Hit {
     private float probability;
     private String location;
     private String text;
+    private String linenumber;
 
     public Hit() {
     }
 
-    public Hit(String keyword, float probability, String location, String text) {
+    public Hit(String keyword, float probability, String location, String text, String linenumber) {
         super();
         this.keyword = keyword;
         this.probability = probability;
         this.location = location;
         this.text = text;
+        this.linenumber = linenumber;
     }
 
     public String getKeyword() {
@@ -47,5 +49,13 @@ public class Hit {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getLinenumber() {
+        return linenumber;
+    }
+
+    public void setLinenumber(String linenumber) {
+        this.linenumber = linenumber;
     }
 }
