@@ -10,5 +10,6 @@
     <display:column property="keyword" sortable="true"/>
     <display:column property="probability" sortable="true"/>
     <display:column property="location" sortable="true"/>
+    <display:column property="linenumber"/>
     <display:column property="text" sortable="true"/>
 </display:table>
