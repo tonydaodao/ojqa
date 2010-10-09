@@ -28,6 +28,10 @@ import org.ojqa.domain.pojo.Hit;
 import org.ojqa.ui.spring.SearchController;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Isaac.yu
+ * 
+ */
 @Service
 public class SearchService {
 
@@ -38,7 +42,7 @@ public class SearchService {
 
         QueryParser parser = new QueryParser(Version.LUCENE_30, "contents", new StandardAnalyzer(Version.LUCENE_30));
         Query query = parser.parse(keyword);
-        TopDocs hits = is.search(query, 10);
+        TopDocs hits = is.search(query, 100);
         List<Hit> results = new ArrayList<Hit>();
 
         for (ScoreDoc scoreDoc : hits.scoreDocs) {
@@ -69,7 +73,7 @@ public class SearchService {
 
             for (File f : files) {
                 if (!f.isDirectory() && !f.isHidden() && f.exists() && f.canRead()
-                        && (filter == null || filter.accept(f))) {
+                        && ((filter == null) || filter.accept(f))) {
                     indexFile(writer, f);
                 }
             }

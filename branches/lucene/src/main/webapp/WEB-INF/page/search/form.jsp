@@ -5,8 +5,8 @@
 	<title>Search Demo</title>
 </head>
 
-<h3>User Profile</h3>
-<form action="<c:url value=""/>" method="post">
+<h3>Search</h3>
+<form action="<c:url value="/search/postsearch"/>" method="post">
     <ul>
         <li>
 	        <a href="<c:url value="/search/index"/>" class="href-button add-button">

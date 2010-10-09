@@ -38,22 +38,31 @@ public class SearchController {
         return "search/form";
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    public ModelAndView doSearch(@RequestParam("keyword") String keyword) throws IOException, ParseException {
-        List<Hit> results = searchService.search(this, keyword);
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("/search/list");
-        mav.addObject("hits", results);
-        return mav;
+    @RequestMapping(value = "postsearch", method = RequestMethod.POST)
+    public ModelAndView postSearch(@RequestParam("keyword") String keyword) throws IOException, ParseException {
+        return search(keyword);
+    }
+
+    @RequestMapping(value = "getsearch", method = RequestMethod.GET)
+    public ModelAndView getSearch(@RequestParam("keyword") String keyword) throws IOException, ParseException {
+        return search(keyword);
     }
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
     public String doIndex() throws IOException, CorruptIndexException, LockObtainFailedException, Exception {
-        searchService.index();
+        this.searchService.index();
         return "redirect:/search";
     }
 
     public void setSearchService(SearchService searchService) {
         this.searchService = searchService;
+    }
+
+    private ModelAndView search(String keyword) throws IOException, CorruptIndexException, ParseException {
+        List<Hit> results = this.searchService.search(this, keyword);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("/search/list");
+        mav.addObject("hits", results);
+        return mav;
     }
 }
