@@ -6,7 +6,7 @@
 </head>
 <h3>Search Result</h3>
 
-<display:table id="users" name="hits"  pagesize="5" class="table" sort="list">
+<display:table id="searchresults" name="hits" requestURI="getsearch" pagesize="5" class="table" sort="list" >
     <display:column property="keyword" sortable="true"/>
     <display:column property="probability" sortable="true"/>
     <display:column property="location" sortable="true"/>

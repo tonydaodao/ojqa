@@ -1,5 +1,9 @@
 package org.ojqa.domain.pojo;
 
+/**
+ * @author Isaac.yu
+ * 
+ */
 public class Hit {
     private String keyword;
     private float probability;
@@ -20,7 +24,7 @@ public class Hit {
     }
 
     public String getKeyword() {
-        return keyword;
+        return this.keyword;
     }
 
     public void setKeyword(String keyword) {
@@ -28,7 +32,7 @@ public class Hit {
     }
 
     public float getProbability() {
-        return probability;
+        return this.probability;
     }
 
     public void setProbability(float probability) {
@@ -36,7 +40,7 @@ public class Hit {
     }
 
     public String getLocation() {
-        return location;
+        return this.location;
     }
 
     public void setLocation(String location) {
@@ -44,7 +48,7 @@ public class Hit {
     }
 
     public String getText() {
-        return text;
+        return this.text;
     }
 
     public void setText(String text) {
@@ -52,7 +56,7 @@ public class Hit {
     }
 
     public String getLinenumber() {
-        return linenumber;
+        return this.linenumber;
     }
 
     public void setLinenumber(String linenumber) {
