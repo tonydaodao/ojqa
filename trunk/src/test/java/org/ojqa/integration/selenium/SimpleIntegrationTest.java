@@ -9,29 +9,31 @@ import com.thoughtworks.selenium.SeleneseTestCase;
 public class SimpleIntegrationTest extends SeleneseTestCase {
     @Override
     public void setUp() throws Exception {
-        setUp("http://localhost:9090/", "*chrome");
+        setUp("http://localhost:9090/ojqa/spring_security_login", "*chrome");
     }
 
     public void testUntitled() throws Exception {
         this.selenium.windowMaximize();
-        this.selenium.setSpeed("2000");
-        this.selenium.open("/actm/spring_security_login");
-        this.selenium.type("j_username", "rod");
-        this.selenium.type("j_password", "koala");
-        this.selenium.click("submit");
-        this.selenium.waitForPageToLoad("30000");
+        this.selenium.setSpeed("1000");
+        this.selenium.open("/ojqa/spring_security_login");
+        this.selenium.click("link=Users");
         this.selenium.click("//div[@id='main']/a/span");
-        this.selenium.waitForPageToLoad("30000");
-        this.selenium.type("name", "newUser");
-        this.selenium.type("password", "password");
-        this.selenium.type("confirmPassword", "Password");
+        this.selenium.type("name", "ybak");
+        this.selenium.type("password", "520811");
+        this.selenium.type("confirmPassword", "520811");
         this.selenium.click("//input[@value='Submit']");
-        this.selenium.waitForPageToLoad("30000");
-        this.selenium.click("//div[@id='main']/table/tbody/tr");
-        this.selenium.waitForPageToLoad("30000");
-        this.selenium.click("//div[@id='main']/form/ul/li[3]/a");
-        this.selenium.waitForPageToLoad("30000");
-        this.selenium.click("link=Logout");
-        this.selenium.waitForPageToLoad("30000");
+        this.selenium.click("link=Comments");
+        this.selenium.type("j_username", "ybak");
+        this.selenium.type("j_password", "520811");
+        this.selenium.click("submit");
+        this.selenium.click("//div[@id='main']/a/span");
+        this.selenium.type("//input[@name='content']", "god like you");
+        // this.selenium.waitForPageToLoad("2000");
+        this.selenium.click("//input[@value='Submit']");
+        this.selenium.click("link=ask a question");
+        this.selenium.type("title", "a dumb question");
+        this.selenium.type("myTextarea", "no question is dumb.");
+        this.selenium.type("tagNames", "question");
+        this.selenium.click("//input[@value='Ask Your Question']");
     }
 }
