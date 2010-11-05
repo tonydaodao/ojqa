@@ -542,6 +542,7 @@
             </executions>
           </plugin>
           <plugin>
+          <!-- mvn integration-test -P itest -->
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>selenium-maven-plugin</artifactId>
             <version>1.0.1</version>
@@ -553,6 +554,7 @@
                 </goals>
                 <configuration>
                   <background>true</background>
+                  <port>4444</port>
                 </configuration>
               </execution>
             </executions>
@@ -563,7 +565,7 @@
   </profiles>
   <properties>
     <checkstyle.config.file>${basedir}/misc/ojqa_checkstyle.xml</checkstyle.config.file>
-    <jmeter.home>E:\Libs\jakarta-jmeter-2.3.4</jmeter.home>
+    <jmeter.home>D:\libs\jakarta-jmeter-2.4</jmeter.home>
     <spring.version>3.0.1.RELEASE</spring.version>
     <hibernate.version>3.5.0-CR-2</hibernate.version>
     <struts.version>2.1.8.1</struts.version>
