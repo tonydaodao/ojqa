@@ -2,7 +2,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="menu" content="CommentMenu"/>
-	<title>Comment Setting | ACTM</title>
+	<title>Comment Setting | OJQA</title>
 </head>
 <h3>Comment Profile</h3>
 
