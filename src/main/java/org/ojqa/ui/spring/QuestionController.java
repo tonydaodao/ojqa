@@ -3,8 +3,8 @@
  */
 package org.ojqa.ui.spring;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.WeakHashMap;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
@@ -38,19 +38,12 @@ public class QuestionController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String input(HttpSession session) {
+        int position = new Float(RandomUtils.nextFloat() * FOOL_LENGTH).intValue();
+        String entryKey = Integer.toString(position);
 
         Map<String, int[]> cacheMap = getCache(session);
 
-        int[] bigFool = getBigFool(cacheMap);
-
-        processBigFool(bigFool);
-        return "question/form";
-    }
-
-    private int[] getBigFool(Map<String, int[]> cacheMap) {
         int[] bigFool = null;
-        int position = new Float(RandomUtils.nextFloat() * FOOL_LENGTH).intValue();
-        String entryKey = Integer.toString(position);
 
         if (cacheMap.containsKey(entryKey)) {
             bigFool = cacheMap.get(entryKey);
@@ -58,7 +51,10 @@ public class QuestionController {
             bigFool = createBigArray(FOOL_LENGTH, position);
             cacheMap.put(entryKey, bigFool);
         }
-        return bigFool;
+
+        processBigFool(bigFool);
+
+        return "question/form";
     }
 
     private Map<String, int[]> getCache(HttpSession session) {
@@ -66,8 +62,8 @@ public class QuestionController {
         Map<String, int[]> cacheMap = (Map) servletContext.getAttribute("cacheMap");
         synchronized (servletContext) {
             if (cacheMap == null) {
-                // cacheMap = new WeakHashMap<String, int[]>();
-                cacheMap = new HashMap<String, int[]>();
+                cacheMap = new WeakHashMap<String, int[]>();
+                // cacheMap = new HashMap<String, int[]>();
                 servletContext.setAttribute("cacheMap", cacheMap);
             }
         }

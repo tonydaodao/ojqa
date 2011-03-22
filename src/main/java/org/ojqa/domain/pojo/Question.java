@@ -23,6 +23,18 @@ public class Question extends IdEntity {
     private String body;
     private Date createTime;
 
+    public Question() {
+        super();
+    }
+
+    public Question(String title, String tagNames, String body, Date createTime) {
+        super();
+        this.title = title;
+        this.tagNames = tagNames;
+        this.body = body;
+        this.createTime = createTime;
+    }
+
     public String getTitle() {
         return this.title;
     }

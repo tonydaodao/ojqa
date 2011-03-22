@@ -60,6 +60,7 @@
     <servlet-name>ojqa</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>static</servlet-name>
     <servlet-class>org.ojqa.ui.tomcat.StaticDefaultServlet</servlet-class>
@@ -76,5 +77,15 @@
   <servlet-mapping>
     <servlet-name>static</servlet-name>
     <url-pattern>/static/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletAdaptor</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletAdaptor</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
 </web-app>
